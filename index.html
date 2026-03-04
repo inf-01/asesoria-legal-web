@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoría Legal Masís</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@900&family=Open+Sans:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #b9a858;
+            --secondary-color: #283444;
+            --button-bg: #ddccb8;
+            --bg-light: #f5f0e7;
+            --text-light: #ffffff;
+            --text-dark: #000000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .georgia {
+            font-family: Georgia, serif;
+        }
+
+        /* Header Section */
+        .hero-section {
+            position: relative;
+            background-color: rgba(0, 19, 46, 0.6);
+            background-image: linear-gradient(rgba(0, 19, 46, 0.6), rgba(0, 19, 46, 0.6)), url('./FOTO_ASESORIA_LEGAL_MASIS/fondo_edificio.png');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            color: var(--text-light);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 72px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        /* Contact Info Section */
+        .info-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .info-col {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-col img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .ubicacion-img {
+            border-radius: 10px;
+            border: 2px solid #000;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .empresa-nombre {
+            color: var(--primary-color);
+            font-size: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .licenciada-nombre {
+            color: var(--secondary-color);
+            font-family: Georgia, serif;
+            font-weight: 800;
+            font-size: 30px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .telefono {
+            color: var(--secondary-color);
+            font-family: Georgia, serif;
+            font-weight: 800;
+            font-size: 38px;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-circle {
+            background-color: var(--bg-light);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 24px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-circle:hover {
+            background-color: #ddd3c2;
+        }
+
+        /* Map Section */
+        .map-section {
+            width: 100%;
+            height: 500px;
+            line-height: 0;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            background-color: var(--bg-light);
+            padding: 75px 20px;
+            position: relative;
+        }
+
+        /* Divi bottom curve separator effect */
+        .contact-section::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: #fff;
+            border-radius: 0 0 50% 50% / 0 0 100% 100%;
+            z-index: 10;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            color: var(--secondary-color);
+            font-family: Georgia, serif;
+            font-weight: 800;
+            font-size: 38px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-subtitle {
+            color: var(--primary-color);
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-container {
+            background: transparent;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            background-color: #ffffff;
+            border: none;
+            font-family: Georgia, serif;
+            font-size: 18px;
+            color: var(--text-dark);
+            outline: none;
+        }
+
+        .form-control::placeholder {
+            color: #666;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--button-bg);
+            color: var(--secondary-color);
+            font-family: Georgia, serif;
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: 2px;
+            border: none;
+            padding: 15px 40px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            float: right;
+            text-transform: uppercase;
+        }
+
+        .submit-btn:hover {
+            background-color: #cbbca8;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        }
+
+        @media (max-width: 980px) {
+            .hero-content h1 {
+                font-size: 70px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 60px;
+            }
+
+            .info-col {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Visítenos</h1>
+            <p>Nuestra oficina se encuentra ubicada en San José, Moravia, San Vicente, 25 metros al este del Restaurante
+                La Princesa Marina.</p>
+        </div>
+    </header>
+
+    <!-- Contact Info Section -->
+    <section class="info-section">
+        <div class="info-col">
+            <img src="./FOTO_ASESORIA_LEGAL_MASIS/logo_bufete.png" alt="Logotipo">
+            <img src="./FOTO_ASESORIA_LEGAL_MASIS/logo_facebook.png" alt="Logotipo Facebook">
+            <!-- as per Title_text -->
+            <p class="empresa-nombre">Asesoría Legal y Notarial Masís</p>
+            <p class="licenciada-nombre">Lic. Maureen Masís Mora</p>
+            <p class="telefono" style="margin-top: 20px;">Tel. 2236 9020</p>
+            <p class="telefono">Cel. 8811 7474</p>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/asesorialegalmasis/" target="_blank" class="social-circle">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/maureen-masis-520822199" target="_blank" class="social-circle">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B50688117474" target="_blank" class="social-circle">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="info-col">
+            <img src="./FOTO_ASESORIA_LEGAL_MASIS/Ubicacion_1.png" alt="Ubicacion 1" class="ubicacion-img">
+            <img src="./FOTO_ASESORIA_LEGAL_MASIS/Ubicacion_2.png" alt="Ubicacion 2" class="ubicacion-img">
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2336.6256017691258!2d-84.04930046329089!3d9.957222814487853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e7b03eaf0195%3A0x524e0d2cda842773!2sAsesor%C3%ADa%20Legal%20Maureen%20Mas%C3%ADs!5e0!3m2!1ses!2scr!4v1695229932605!5m2!1ses!2scr"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="contacto">
+        <div class="contact-container">
+            <h2 class="contact-title">Escríbanos</h2>
+            <p class="contact-subtitle">Asesoría Legal y Notarial Masís</p>
+
+            <div class="form-container clearfix">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="correo" name="correo" class="form-control" placeholder="Correo"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Teléfono"
+                            pattern="[0-9]*">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Mensaje"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="et_pb_contact_form_0">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botpress Script Injection -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <!-- Placeholder configs, replace if specific IDs are given -->
+    <!--
+    <script>
+      window.botpressWebChat.init({
+          "clientId": "your-client-id",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "botName": "Asistente - Asesoría Legal Masís"
+      });
+    </script>
+    -->
+</body>
+
+</html>
